@@ -7,7 +7,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h3>React CI/CD pipeline using github actions </h3>
-        <h4>for free deployment we used hithub pages.</h4>
+        <h4>For free deployment we used Github pages.</h4>
+        <h5>Aditya Patil (331046)</h5>
+        <h5>Mithilesh Lathkar (331034)</h5>
+        <h5>Ranjitsingh Jadhav (331026)</h5>
         <a
           className="App-link"
           href="https://reactjs.org"
