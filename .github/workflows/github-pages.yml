@@ -3,24 +3,28 @@ name: Build and Deploy React App to GitHub Pages
 on:
   push:
     branches: [main]
+    # This section defines the trigger event for the workflow. In this case, the workflow will run when a push event occurs on the main branch.
 jobs:
   build-push-gcr:
     name: Build and Deploy
     runs-on: ubuntu-latest
-
+    # The jobs section defines the different jobs that will be executed as part of the workflow. In this case, there is one job named build-push-gcr that will run on an ubuntu-latest runner.
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
+        # The steps section contains the individual steps that will be executed within the job. The first step is to check out the source code using the actions/checkout@v2 action.
       - name: Build
         run: npm install
-
+        # This step runs the npm install command to install the project dependencies.
       - name: Test
         run: npm run test
-
+        # This step runs the npm run test command to execute the project's test suite.
       - name: Deploy
         run: |
           git config --global user.name 'Anton Putra'
           git config --global user.email 'me@antonputra.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}    
           npm run deploy
+        #   This step is responsible for deploying the application to GitHub Pages. It sets the global Git configuration with a username and email, updates the remote origin URL to include the access token, and then runs the npm run deploy command to deploy the application.
+
+        # and finally we deploy the application !!! using npm run deploy .

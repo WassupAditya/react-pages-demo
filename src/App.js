@@ -11,14 +11,14 @@ function App() {
         <h5>Aditya Patil (331046)</h5>
         <h5>Mithilesh Lathkar (331034)</h5>
         <h5>Ranjitsingh Jadhav (331026)</h5>
-        <a
+        {/* <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
     </div>
   );
